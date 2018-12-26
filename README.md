@@ -3,11 +3,11 @@ based on ant-design Table, extend header contextMenu settings , and auto fit scr
 
 ## how to use it
 
- <CustomTable
-  name={'my-table-1'}
-  className={'auto-scroll-y'}
-  columns={this.tableColumns}
-  dataSource={tableDataSource}
-  scroll={{x: true, y: true}}
- />
+> <CustomTable
+>  name={'my-table-1'}
+>  className={'auto-scroll-y'}
+>  columns={this.tableColumns}
+>  dataSource={tableDataSource}
+>  scroll={{x: true, y: true}}
+> />
 
