@@ -1,0 +1,180 @@
+/* table */
+.ant-table-wrapper {
+  .ant-table.ant-table-fixed-header {
+    .ant-table-content {
+      .ant-table-body {
+        background-color: transparent;
+      }
+    }
+  }
+  .ant-table-small {
+    border: none;
+    .ant-table-content .ant-table-scroll .ant-table-body table .ant-table-tbody {
+      tr td {
+        padding: 4px 0;
+      }
+    }
+  }
+  .ant-table-column-sorter {
+    color: inherit;
+    margin-top: -3px;
+    .ant-table-column-sorter-up, .ant-table-column-sorter-down {
+      display: flex
+    }
+    .anticon.anticon-caret-up,.anticon.anticon-caret-down {
+      font-size: 12px;
+    }
+  }
+  .ant-table-column-has-filters {
+    .anticon.anticon-filter {
+      font-size: 14px;
+    }
+  }
+  .ant-table-body,.ant-table-body-inner {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    .ant-table-thead {
+      th {
+        color: #7B8082;
+        border: none;
+        cursor: default;
+        white-space: nowrap;
+        user-select: none;
+        box-sizing: border-box;
+        transition: none;
+        > span:nth-child(1) {
+          display: flex;
+          align-items: center;
+        }
+      }
+      .react-resizable {
+        position: relative;
+      }
+      .react-resizable-handle {
+        position: absolute;
+        width: 1px;
+        height: 100%;
+        bottom: 0;
+        right: 0;
+        cursor: col-resize;
+        background: linear-gradient(#121A19, #4A4D4C, #121A19);
+        border-left: #121A19 3px solid;
+        border-right: #121A19 3px solid;
+        box-sizing: initial;
+      }
+    }
+    .ant-table-tbody {
+      > tr.ant-table-row-selected td {
+        background-color: @btn-default-bg;
+      }
+      tr td {
+        border: none;
+        white-space: nowrap;
+        box-sizing: border-box;
+        transition: background-color,background 0.2s;
+      }
+      .ant-table-row {
+        background-color: #121A19;
+        .ant-table-row-expand-icon {
+          color: #7B8082;
+        }
+      }
+      .ant-table-row.ss-row:nth-of-type(odd) {
+        background-color: #1E2B29;
+      }
+      .ant-table-expanded-row {
+        background-color: #222;
+        color: #7B8082;
+      }
+      //> tr:hover,.ant-table-row-hover > td {
+      //  background-color: @btn-default-bg;
+      //}
+      .ss-row-odd {
+        background-color: #1E2B29;
+      }
+      .ss-row-even {
+        background-color: #121A19;
+      }
+    }
+  }
+  .ant-table-fixed-left {
+    box-shadow: 6px 0 6px -4px rgba(0, 0, 0, 0.5);
+  }
+  .ant-table-fixed-right {
+    box-shadow: -6px 0 6px -4px rgba(0, 0, 0, 0.5);
+  }
+  .ant-pagination.ant-table-pagination {
+    margin-right: 10px;
+  }
+  // 自适应高度滚动条
+  &.auto-scroll-y {
+    height: 100%;
+    .ant-spin-nested-loading,
+    .ant-spin-container,
+    .ant-table,
+    .ant-table-scroll,
+    .ant-table-body-inner,
+    .ant-table-content {
+      height: 100%;
+    }
+    .ant-table-placeholder {
+      display: none;
+    }
+    .ant-table-small {
+      .ant-table-header {
+        //height: 35px;
+        margin-bottom: 0!important;
+        overflow-x: hidden;
+      }
+      .ant-table-body {
+        height: calc(100% - 27px);
+      }
+      .ant-table-body-outer {
+        height: calc(100% - 27px);
+      }
+      .ant-table-tbody {
+        td > div {
+          padding-left: 8px;
+        }
+      }
+    }
+    .ant-table-scroll {
+      .ant-table-body {
+        width: 100%;
+        overflow-y: scroll;
+        .ant-table-fixed {
+          //width: calc(100% - 8px);
+        }
+      }
+    }
+    .ant-table-fixed-left {
+      height: calc(100% - 8px);
+    }
+    .ant-table-body {
+      height: calc(100% - 35px);
+    }
+    .ant-table-tbody {
+      td {
+        padding-left: 0;
+        padding-right: 0;
+        > div {
+          padding-left: 18px;
+        }
+      }
+    }
+    .ant-table-body-outer {
+      height: calc(100% - 35px);
+    }
+    .ant-table-content {
+      position: relative;
+    }
+    .ant-table-body, .ant-table-body-inner {
+      overflow-y: auto;
+    }
+    .ant-table-header {
+      //overflow-y: hidden!important;
+    }
+    .ant-table-body-inner {
+      overflow-x: hidden;
+    }
+  }
+}
