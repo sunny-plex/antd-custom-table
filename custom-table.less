@@ -1,0 +1,39 @@
+.custom-table-setting {
+  display: flex;
+  justify-content: center;
+  table {
+    width: 100%;
+    th {
+      font-weight: normal;
+      background-color: #161a18;
+      line-height: 30px;
+      padding: 0 15px;
+      border: #232629 1px solid;
+    }
+    td {
+      background-color: #161a18;
+      line-height: 30px;
+      padding: 0 15px;
+      border: #232629 1px solid;
+      user-select: none;
+      transition: all ease-out 200ms;
+    }
+    input {
+      width: 70px;
+    }
+    .ant-switch {
+      display: table-caption;
+    }
+    .drag-source {
+      td {
+        background-color: #136c5e;
+      }
+    }
+    .drag-target {
+      td {
+        box-shadow: 0 -2px 0 #FF7D00;
+        z-index: 6666;
+      }
+    }
+  }
+}
